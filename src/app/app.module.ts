@@ -21,6 +21,7 @@ import {  postslist } from "./Posts/Create-Posts/Post-list/post-list.componnt";
     navbar,
     postslist
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

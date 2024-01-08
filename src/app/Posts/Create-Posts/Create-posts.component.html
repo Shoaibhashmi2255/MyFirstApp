@@ -1,12 +1,14 @@
 <mat-card>
         <form action="">
-            <mat-form-field>
-                <textarea matInput rows="6" [value]="newuserpost" #usersposts>hellow world</textarea>
+            <mat-form-field style="width: 100%;" >
+                <input matInput type="text" [(ngModel)]="newuserTitle">
+            </mat-form-field>
+            <mat-form-field style="width: 100%;">
+                <textarea matInput rows="6" [(ngModel)]="newuserContent" #usersposts></textarea>
             </mat-form-field>
         </form>
 </mat-card>
-<button mat-raised-button color="primary" (click)="onClickDisplay()">Save Me</button>
+<button mat-raised-button color="accent" style="margin-left: 2%; margin-top: 2%;" (click)="onClickDisplay()">Save Me</button>
 
 <!-- <br><hr> -->
-<p>{{newuserpost}}</p>
 <!-- <textarea   rows="10" [(ngModel)]="userinput" ></textarea> -->

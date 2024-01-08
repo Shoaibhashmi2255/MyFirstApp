@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { post } from './Posts/Create-Posts/Post-list/post-list.componnt';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MyFirstApp';
+  storedPosts:post[] = [];
+  onPostCreated (post:post){
+    this.storedPosts.push(post);
+  }
 
 }

@@ -1,14 +1,13 @@
 mat-card {
-  width: 100vh;
-  margin:auto;
+  /* width: 100vh; */
+  /* margin:auto; */
   /* display: flex; */
   /* justify-content: center; */
   /* align-items:normal; */
   /* height: 1000vh; */
 }
 textarea {
-  display: flex;
-  
+  display: block;
 }
 /* button {
   align-items:center;
