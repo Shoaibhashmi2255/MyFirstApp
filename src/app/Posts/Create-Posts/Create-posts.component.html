@@ -1,6 +1,12 @@
-<br><hr>
-<button (click)="onClickDisplay()">Save Me</button>
-<button>Presse me</button>
+<mat-card>
+        <form action="">
+            <mat-form-field>
+                <textarea matInput rows="6" [value]="newuserpost" #usersposts>hellow world</textarea>
+            </mat-form-field>
+        </form>
+</mat-card>
+<button mat-raised-button color="primary" (click)="onClickDisplay()">Save Me</button>
+
+<!-- <br><hr> -->
 <p>{{newuserpost}}</p>
-<textarea rows="10" [value]="newuserpost" #usersposts>hellow world</textarea>
-<textarea  rows="10" [(ngModel)]="userinput" ></textarea>
+<!-- <textarea   rows="10" [(ngModel)]="userinput" ></textarea> -->

@@ -1,11 +1,12 @@
 import { Component } from "@angular/core";
 @Component ({
     selector : 'CreatepostsComponent', 
-    templateUrl : './Create-posts.component.html' 
-
+    templateUrl : './Create-posts.component.html', 
+    styleUrls : ['./Create-Posts.compnent.css'],
+   
 })
 export class createpostscomponent {
-    newuserpost = 'No Content';
+    newuserpost = '';
     userinput = '';
     onClickDisplay () { 
         // this.newuserpost ='Imm new here';
