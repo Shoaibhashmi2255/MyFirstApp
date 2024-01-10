@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from "@angular/core";
+import { NgForm } from "@angular/forms";
 @Component ({
     selector : 'CreatepostsComponent', 
     templateUrl : './Create-posts.component.html', 
@@ -11,10 +12,13 @@ export class createpostscomponent {
     @Output() PostCreated = new EventEmitter();
  
  
-    onClickDisplay () { 
+    onClickDisplay (form:NgForm) {  
+        if (form.invalid){
+            return;
+        }
         const posts = {
-            title: this.newuserTitle,
-            content: this.newuserContent
+            title: form.value.title,
+            content: form.value.content
         }
         this.PostCreated.emit(posts);
     }

@@ -17,7 +17,4 @@ export class postslist {
 
 //    ];
 @Input() posts:post[]=[];
-constructor(){
-   
-}
 }

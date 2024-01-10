@@ -1,14 +1,21 @@
 <mat-card>
-        <form action="">
+        <form (submit)="onClickDisplay(postForm)" #postForm="ngForm">
             <mat-form-field style="width: 100%;" >
-                <input matInput type="text" [(ngModel)]="newuserTitle">
+                <input matInput type="text" 
+                ngModel 
+                name="title" required #title="ngModel">
+                <mat-error *ngIf="title.invalid" >Please add title here!</mat-error>
             </mat-form-field>
             <mat-form-field style="width: 100%;">
-                <textarea matInput rows="6" [(ngModel)]="newuserContent" #usersposts></textarea>
+                <textarea matInput rows="6" 
+                ngModel name="content" required></textarea>
+                <mat-error *ngIf="title.invalid" >Please add content here!</mat-error>
             </mat-form-field>
+            
+            <button mat-raised-button color="accent" style="margin-left: 2%; margin-top: 2%;" type="submit">Save Me</button>
         </form>
 </mat-card>
-<button mat-raised-button color="accent" style="margin-left: 2%; margin-top: 2%;" (click)="onClickDisplay()">Save Me</button>
+
 
 <!-- <br><hr> -->
 <!-- <textarea   rows="10" [(ngModel)]="userinput" ></textarea> -->
