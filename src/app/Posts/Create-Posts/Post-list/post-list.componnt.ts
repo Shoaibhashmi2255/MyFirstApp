@@ -1,4 +1,5 @@
 import { Component,Input } from "@angular/core";
+import { PostService } from "../../posts.service";
 export interface post {
     title: string;
     content: string;
@@ -16,5 +17,7 @@ export class postslist {
 //         {title:'Third ', content:'This is the Third Post\'s Content'}
 
 //    ];
-@Input() posts:post[]=[];
+ @Input() posts:post[]=[];
+
+ constructor(public postService: PostService){ }
 }
