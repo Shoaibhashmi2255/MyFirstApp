@@ -2,13 +2,13 @@
         <form (submit)="onClickDisplay(postForm)" #postForm="ngForm">
             <mat-form-field style="width: 100%;" >
                 <input matInput type="text" 
-                ngModel 
+                ngModel placeholder="Post Title"
                 name="title" required #title="ngModel">
                 <mat-error *ngIf="title.invalid" >Please add title here!</mat-error>
             </mat-form-field>
             <mat-form-field style="width: 100%;">
                 <textarea matInput rows="6" 
-                ngModel name="content" required></textarea>
+                ngModel placeholder="Post Content" name="content" required></textarea>
                 <mat-error *ngIf="title.invalid" >Please add content here!</mat-error>
             </mat-form-field>
             
